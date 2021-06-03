@@ -7,8 +7,10 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
-
-const geometry = new THREE.BoxGeometry();
+const radius = 1;
+const height = 2;
+const radialSegments = 16;
+const geometry =  new THREE.ConeGeometry(radius, height, radialSegments);;
 const material = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
 //onst material = new THREE.MeshPhongMaterial();
 const materialB = new THREE.MeshBasicMaterial({ color: 0x0000FFFF });
